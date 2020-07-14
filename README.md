@@ -32,10 +32,11 @@ If you did all of the above you may now follow these install instructions to set
 3. Install macOS Command Line Tools by running `xcode-select --install`
 4. [Generate a new public and private SSH key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add them to Github and Gitlab
 5. Clone this repo to `~/.dotfiles`
-6. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started)
-6. Run `fresh.sh` to start the installation
-7. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
-8. Restart your computer to finalize the process
+6. Backup any custom fonts installed in FontBoook
+7. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started)
+8. Run `fresh.sh` to start the installation
+9. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+10. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 
