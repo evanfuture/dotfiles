@@ -54,6 +54,8 @@ export JIRA_PREFIX='RAIWEB-'
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+export JAVA_VERSION=1.8
+export JAVA_HOME=$(/usr/libexec/java_home -v "$JAVA_VERSION")
 
 
 . ~/Projects/raiffeisen/raiweb/raiweb-design-package/src/frontend/script/.raiweb-commands.bash
