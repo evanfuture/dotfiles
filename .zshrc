@@ -54,9 +54,12 @@ export JIRA_PREFIX='RAIWEB-'
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-export JAVA_VERSION=1.8
-export JAVA_HOME=$(/usr/libexec/java_home -v "$JAVA_VERSION")
-
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+# JAVA_HOME set via alias
 
 . ~/Projects/raiffeisen/raiweb/raiweb-design-package/src/frontend/script/.raiweb-commands.bash
-. ~/Projects/raiffeisen/wwwb/wwwb-design-package/src/frontend/script/.wwwb-commands.bash
+
+# tabtab source for ncps package
+# uninstall by removing these lines or running `tabtab uninstall ncps`
+[[ -f /Users/evanpayne/.nvm/versions/node/v12.18.2/lib/node_modules/@nc/project-shortcuts-cli/node_modules/tabtab/.completions/ncps.zsh ]] && . /Users/evanpayne/.nvm/versions/node/v12.18.2/lib/node_modules/@nc/project-shortcuts-cli/node_modules/tabtab/.completions/ncps.zsh
