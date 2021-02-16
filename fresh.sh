@@ -22,10 +22,6 @@ mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_passwor
 mkdir $HOME/Projects
 mkdir $HOME/Code
 
-# Create sites subdirectories
-mkdir $HOME/Projects/netcentric
-mkdir $HOME/Projects/raiffeisen
-
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
