@@ -16,6 +16,7 @@ First, go through the checklist below to make sure you didn't forget anything be
 - Exports from local databases
 - Export stashes from OneTab (chrome and firefox, maybe)
 - List of VS Code extensions (mackup should handle backing up the user settings)
+- Backup any custom fonts installed in FontBoook
 - Did you update [mackup](https://github.com/lra/mackup) to the latest version and ran `mackup backup`?
 - Be sure mackup files are actually backed up
 
@@ -32,11 +33,10 @@ If you did all of the above you may now follow these install instructions to set
 3. Install macOS Command Line Tools by running `xcode-select --install`
 4. [Generate a new public and private SSH key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add them to Github and Gitlab
 5. Clone this repo to `~/.dotfiles`
-6. Backup any custom fonts installed in FontBoook
-7. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started)
-8. Run `fresh.sh` to start the installation
-9. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
-10. Restart your computer to finalize the process
+6. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started)
+7. Run `fresh.sh` to start the installation
+8. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+9. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 

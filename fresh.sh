@@ -17,8 +17,7 @@ brew bundle
 # Set default MySQL root password and auth type.
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
 
-# Create a Sites directory
-# This is a default directory for macOS user accounts but doesn't comes pre-installed
+# Create favorite directories
 mkdir $HOME/Projects
 mkdir $HOME/Code
 
