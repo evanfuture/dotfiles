@@ -20,12 +20,14 @@ brew "imagemagick"
 brew "libfido2"
 brew "python@3.10"
 brew "mackup"
+brew "mas"
 brew "openjdk"
 brew "maven"
 brew "mysql", restart_service: true
 brew "nghttp2"
 brew "node@12"
 brew "nvm"
+brew "postgresql"
 brew "subversion"
 brew "youtube-dl"
 brew "stripe/stripe-cli/stripe"
@@ -77,6 +79,7 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Kiwi for Gmail", id: 986304488
 mas "Mini Motorways", id: 1456188526
+mas "Muse", id: 1501563902
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
