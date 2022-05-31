@@ -10,27 +10,6 @@ export ZSH=$HOME/.oh-my-zsh
 # Enable completions
 autoload -Uz compinit && compinit
 
-# spaceship - Theme Settings
-export SPACESHIP_PROMPT_ORDER=(
-  user
-  host
-  dir
-  git
-  package
-  node
-  xcode
-  swift
-  golang
-  exec_time
-  line_sep
-  vi_mode
-  jobs
-  exit_code
-  char
-)
-
-ZSH_THEME="spaceship"
-
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$DOTFILES
 
@@ -39,9 +18,11 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize github jira brew macos)
+plugins=(git github jira brew macos)
 
 source $ZSH/oh-my-zsh.sh
+
+eval "$($GOPATH/bin/oh-my-posh init zsh --config ~/.dotfiles/night-owl.omp.json)"
 
 # User configuration
 export USER_NAME="evanpayne"
@@ -53,4 +34,3 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
