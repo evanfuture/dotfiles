@@ -61,7 +61,6 @@ cask "handbrake"
 cask "itch"
 cask "itsycal"
 cask "local"
-cask "microsoft-teams"
 cask "minecraft"
 cask "obs"
 cask "obs-ndi"
@@ -90,7 +89,6 @@ mas "HP Smart", id: 1474276998
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Kiwi for Gmail", id: 986304488
-mas "Muse", id: 1501563902
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
