@@ -11,4 +11,7 @@ export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

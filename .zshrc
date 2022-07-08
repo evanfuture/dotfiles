@@ -22,7 +22,7 @@ plugins=(git github jira brew macos)
 
 source $ZSH/oh-my-zsh.sh
 
-eval "$($GOPATH/bin/oh-my-posh init zsh --config ~/.dotfiles/night-owl.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.dotfiles/night-owl.omp.json)"
 
 # User configuration
 export USER_NAME="evanpayne"
@@ -32,5 +32,5 @@ export EDITOR='code'
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
