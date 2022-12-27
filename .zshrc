@@ -30,7 +30,31 @@ export LC_ALL="en_GB.UTF-8"
 export LANG="en_GB.UTF-8"
 export EDITOR='code'
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/evanpayne/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/evanpayne/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/evanpayne/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/evanpayne/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# pnpm
+export PNPM_HOME="/Users/evanpayne/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
