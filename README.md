@@ -6,7 +6,7 @@ This repository serves as my way to help me setup and maintain my Mac. It takes 
 
 These instructions are for when you've already set up your dotfiles.
 
-### Before you re-install
+### Backup your data
 
 First, go through the checklist below to make sure you didn't forget anything before you wipe your hard drive.
 
@@ -14,31 +14,41 @@ First, go through the checklist below to make sure you didn't forget anything be
 - Backup any untracked files to disk
 - Did you save all of your work from apps which aren't synced through iCloud?
 - Exports from local databases
-- Export stashes from OneTab (chrome and firefox, maybe)
-- List of VS Code extensions (mackup should handle backing up the user settings)
 - Backup any custom fonts installed in FontBoook
 - Did you update [mackup](https://github.com/lra/mackup) to the latest version and ran `mackup backup`?
 - Be sure mackup files are actually backed up
 
-### Installing macOS cleanly
-
-After going to our checklist above and making sure you backed everything up, we're going to cleanly install macOS with the latest release. Follow [this article](https://www.imore.com/how-do-clean-install-macos) to cleanly install the latest macOS version.
-
 ### Setting up your Mac
 
-If you did all of the above you may now follow these install instructions to setup a new Mac.
+After backing up your old Mac you may now follow these install instructions to setup a new one.
 
-1. Update macOS to the latest version with the App Store
-2. Install Xcode from the App Store, open it and accept the license agreement
-3. Install macOS Command Line Tools by running `xcode-select --install`
-4. [Generate a new public and private SSH key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add them to Github and Gitlab
-5. Clone this repo to `~/.dotfiles`
-6. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started)
-7. Run `fresh.sh` to start the installation
-8. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
-9. Restart your computer to finalize the process
+1. Update macOS to the latest version through system preferences
+2. [Generate a new public and private SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running:
+
+   ```zsh
+   curl https://raw.githubusercontent.com/evanfuture/dotfiles/HEAD/ssh.sh | sh -s "<your-email-address>"
+   ```
+
+3. Clone this repo to `~/.dotfiles` with:
+
+   ```zsh
+   git clone --recursive git@github.com:evanfuture/dotfiles.git ~/.dotfiles
+   ```
+
+4. Run the installation with:
+
+   ```zsh
+   cd ~/.dotfiles && ./fresh.sh
+   ```
+
+5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+6. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
+
+### Cleaning your old Mac (optionally)
+
+After you've set up your new Mac you may want to wipe and clean install your old Mac. Follow [this article](https://support.apple.com/guide/mac-help/erase-and-reinstall-macos-mh27903/mac) to do that. Remember to [backup your data](#backup-your-data) first!
 
 ## Your Own Dotfiles
 
@@ -48,7 +58,7 @@ If you want to start with your own dotfiles from this setup, it's pretty easy to
 
 Go through the [`.macos`](./.macos) file and adjust the settings to your liking. You can find much more settings at [the original script by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and [Kevin Suttle's macOS Defaults project](https://github.com/kevinSuttle/MacOS-Defaults).
 
-Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://caskroom.github.io/search) to check if the app you want to install is available.
+Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://formulae.brew.sh/cask/) to check if the app you want to install is available.
 
 Check out the [`aliases.zsh`](./aliases.zsh) file and add your own aliases. If you need to tweak your `$PATH` check out the [`path.zsh`](./path.zsh) file. These files get loaded in because the `$ZSH_CUSTOM` setting points to the `.dotfiles` directory. You can adjust the [`.zshrc`](./.zshrc) file to your liking to tweak your Oh My Zsh setup. More info about how to customize Oh My Zsh can be found [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Customization).
 
